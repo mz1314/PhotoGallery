@@ -1,7 +1,8 @@
 package zepeda.misael.photogallery.api
 
 import retrofit2.http.GET
-private const val API_KEY = "miapi"
+private const val API_KEY = "123456789"
+
 interface FlickrApi {
     @GET(
         "services/rest/?method=flickr.interestingness.getList" +

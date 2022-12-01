@@ -30,11 +30,14 @@ class PhotoGalleryFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         viewLifecycleOwner.lifecycleScope.launch {
-            val response = PhotoRepository().fetchContents()
+            val response = PhotoRepository().fetchPhotos()
             Log.d(TAG, "Response received: $response")
         }
+
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
